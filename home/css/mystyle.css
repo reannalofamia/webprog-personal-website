@@ -1,13 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background-color: lightblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  padding-top: 2rem; /* Add space on top */
+}
+
+.header {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 2rem;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f7f7f7;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.reign {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.reign-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}
+
+.highlight {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
+  padding: 0 2rem;
+}
+
+.column-left h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.column-left p {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.column-left p a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.column-left p a:hover {
+  text-decoration: underline;
+  color: #f72626;
+}
+
+.reign-image1 {
+  display: block;
+  max-width: 75%;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .reign-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
-  
-  h1 {
-    color: white;
-    text-align: center;
+
+  .reign-image1 {
+    max-width: 70%;
   }
-  
-  p {
-    font-family: verdana;
-    font-size: 20px;
+}
+
+.education-achievements {
+  width: 90%;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.education-achievements h2, .experience-hobbies h2, .goals h2, .picture-gallery h2 {
+  font-size: 2rem; /* Set a consistent font size */
+  font-weight: 750; /* Ensure the font weight is the same */
+  color: #000000; /* Set the same color */
+  text-align: center; /* Center-align the headings */
+  margin-bottom: 2rem;
+}
+
+.education {
+  margin-bottom: 2rem;
+}
+
+.education h3 {
+  font-size: 1.4rem;
+  color: #000000;
+  font-weight: 600;
+}
+
+.education h4 {
+  font-size: 1.1rem;
+  color: #616161;
+  margin-top: 0.5rem;
+}
+
+.education ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.education ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .education-achievements {
+    padding: 1.5rem;
   }
+
+  .education h3 {
+    font-size: 1.2rem;
+  }
+
+  .education h4 {
+    font-size: 1rem;
+  }
+
+  .education ul li {
+    font-size: 0.9rem;
+  }
+}
+
+.separator {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 2rem 0;
+}
+
+.experience-hobbies {
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers content horizontally */
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  gap: 2rem; /* Adds spacing between sections */
+}
+
+.left-column, .right-column {
+  width: 48%; /* Adjust the width of the columns */
+}
+
+.left-column h2, .right-column h2 {
+  margin-bottom: 1rem;
+}
+
+.left-column ul, .right-column ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.left-column li, .right-column li {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.goals h2 {
+  font-size: 2.5rem; /* Larger heading */
+  margin-bottom: 20px; /* Increased space below heading */
+  text-align: center; /* Center the heading */
+}
+
+.goals .education p {
+  font-size: 1.2rem; /* Larger text size for the paragraph */
+  line-height: 1.6; /* Increased line height for better readability */
+  text-align: justify; /* Justify the text for a neat look */
+  padding: 10px; /* Add some padding around the paragraph */
+}
+
+@media (max-width: 768px) {
+  .goals h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .goals .education p {
+    font-size: 1rem; /* Adjust paragraph font size on mobile */
+  }
+}
+
+
+
+.education p {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .experience-hobbies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column, .right-column {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .left-column h2, .right-column h2 {
+    font-size: 1.5rem;
+  }
+
+  .left-column li, .right-column li {
+    font-size: 1rem;
+  }
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.progress {
+  background-color: #000;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Adjust text styling for IT Experience list items */
+.left-column ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.left-column ul li span {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+h2 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px; /* Smaller gap for tighter spacing */
+}
+
+.gallery img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Align the 'Goals in Life' and 'Education and Achievements' */
+.sections-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Adds space between sections */
+  justify-content: space-between;
+}
+
+
+/* Style for the Picture Gallery Section */
+.picture-gallery {
+  padding: 20px;
+  text-align: center;
+  width: 90%; /* Adjust the width to take up more space */
+  max-width: 1200px; /* Set a max width to limit size */
+  margin: 0 auto;
+}
+
+/* Font size change for the gallery heading */
+.picture-gallery h2 {
+  font-size: 2rem; /* Make the font size the same as other section titles */
+  font-weight: 750; /* Match the font weight with other section titles */
+  color: #000; /* Set text color to black or any color you prefer */
+  margin-bottom: 1.5rem; /* Add some spacing below the heading */
+}
+
+/* Gallery container styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Make images larger by setting a minimum size */
+  gap: 20px; /* Increased gap for more spacing */
+  justify-items: center;
+}
+
+/* Individual image styling */
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 4px solid #000000; /* Light gray border */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  max-height: 300px; /* Limit the height for consistency */
+  transition: transform 0.3s ease-in-out; /* Optional: smooth transition for hover effect */
+}
+
+/* Optional: Hover effect for images */
+.gallery img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.footer {
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Adjust height as needed */
+}
+
+.reign-image4 {
+  display: block;
+}
+
+
