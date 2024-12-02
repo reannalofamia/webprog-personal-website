@@ -19,14 +19,6 @@
   box-sizing: border-box;
 }
 
-/* Image Styling */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-
 /* Typography */
 .flex-container h1, .flex-container h2 {
   font-size: 1.2rem; /* Scales down headings for smaller screens */
