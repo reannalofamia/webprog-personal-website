@@ -1,58 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-<link rel="stylesheet" href="css/flexbox-grid.css">
-<title>Personal Profile</title>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>Personal Profile Web Page</h1>
-    </header>
-    <main>
-      <section class="main-content">
-        <div class="about">
-          <h1>About Me</h1>
-          <p>Hello, I'm <span class="highlight">Reanna Lofamia</span></p>
-          <p>I am a Computer Science student specializing in Cyber Security and Forensics at Asia Pacific College.</p>
-          <a href="https://www.linkedin.com/in/reannalofamia/" target="_blank">LinkedIn</a> |
-          <a href="https://instagram.com/reignlofamia" target="_blank">Instagram</a>
-        </div>
+  <title>Hello Reanna | Personal Website</title>
 
-        <div class="education">
-          <h1>Education and Achievements</h1>
-          <h3>Asia Pacific College (2023 - Present)</h3>
-          <ul>
-            <li>Dean's Lister (2023-2024)</li>
-          </ul>
-          <h3>Immaculate Heart of Mary College (2021 - 2023)</h3>
-          <ul>
-            <li>Consistent Honor Student</li>
-            <li>Participant in 15th DLSU Arts Congress</li>
-            <li>STEM Society Social Media Manager (2022-2023)</li>
-          </ul>
-        </div>
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div class="skills">
-          <h1>Skills</h1>
-          <ul>
-            <li>Java</li>
-            <li>Figma</li>
-            <li>Python</li>
-            <li>Adobe Photoshop</li>
-          </ul>
-        </div>
+  <!-- Stylesheets, Scripts -->
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js"></script>
+  <script src="js/comment.js"></script>
+  <script src="js/app.js"></script>
 
-        <div class="hobbies">
-          <h1>Hobbies and Interests</h1>
-          <ul>
-            <li>Gaming</li>
-            <li>Graphic Design</li>
-            <li>Painting</li>
-          </ul>
-        </div>
-      </section>
-    </main>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <h1 class="name">Reanna Lofamia</h1>
+    <ul class="nav-menu">
+       <li><a href="#about">About</a></li>
+       <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+
+ </nav>
+
+ <!-- Intro | Reign Section -->
+ <section class="reign">
+  <div class="reign-container">
+    <div class="column-right-illustration">
+      <img src="images/reign-mustache.svg" alt="An illustration of Reign" class="reign-image1" />
+    </div>
+
+    <div class="column-left-text">
+      <h1>Hello! I'm <span class="highlight">Reign</span>, and I am a Computer Science student.</h1>
+      <p>
+        Check out <a href="https://open.spotify.com/user/31asms4rd73zpp4cdqbpbq4r624a?si=e7e4b15495ac4a06" target="_blank">songs I'm listening to</a>, find me on
+        <a href="https://instagram.com/reignlofamia" target="_blank">Instagram</a> / 
+        <a href="https://github.com/reannalofamia" target="_blank">GitHub</a> / 
+        <a href="https://www.linkedin.com/in/reannalofamia/" target="_blank">LinkedIn</a> / 
+        or just <a href="mailto:rplofamia@student.apc.edu.ph">send me an email</a> saying hi.
+      </p>
+
+    </div>
   </div>
-</body>
+
+  <!-- Filler 1 -->
+  <div class="image-container-weirdo">
+    <img src="images/4-weirdo.svg" alt="4 Weirdo" class="responsive-image1">
+  </div>
+
+<!-- About -->
+<section id="about">
+<section class="about">
+  <div class="reign-about">
+    <div class="column-right-boogsh-text">
+      <h1>About</h1>
+      <p>Hello, I'm Reanna! I’m a student studying Computer Science, with a focus on Cybersecurity and Forensics. I’m really interested in technology and how it can help solve problems and keep things safe online. I also love art and enjoy finding ways to mix creativity with technology. I’m always excited to learn new things and improve my skills in both areas.</p>
+      <p>A fun fact about me is that I love playing FPS games, but <span class="highlight"></span>I’ve loved it since I was a kid. When I’m not playing video games, I also enjoy painting, drawing, or making random videos.</p>
+    </div>
+
+    <div class="column-left-boogsh-image">
+      <img src="images/boogsh.jpg" alt="An illustration of Reign" class="reign-image-weirdo" />
+    </div>
+  </section>
+  </div>
+</section>  
+
+      <!-- Tech and Graphic Design Stack -->
+      <div class="stack">
+        <section class="stack-tools">
+           <div class="stack-categories">
+              <!-- Tech Stack -->
+              <div class="tools-stack">
+                 <h1>Tech Stack</h1>
+                 <div class="stack-apps-list">
+                    <div class="app-item">
+                       <img src="images/icons8-python.svg" alt="Python">
+                    </div>
+                    <div class="tool-item">
+                       <img src="images/icons8-java.svg" alt="Java">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-html.svg" alt="HTML">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-css.svg" alt="CSS">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-mysql.svg" alt="MySQL">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-visual-studio-code.svg" alt="Visual Studio Code">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-github.svg" alt="GitHub">
+                    </div>
+                    <div class="app-item">
+                      <img src="images/icons8-kali-linux.svg" alt="GitHub">
+                   </div>
+                   <div class="app-item">
+                    <img src="images/icons8-ubuntu-50.png" alt="GitHub">
+                 </div>
+                 </div>
+              </div>
+              <!-- Graphic Design & Video Editing Tools -->
+              <div class="stack-category">
+                <h1>Graphic Design Stack</h1>
+                 <div class="stack-apps-list">
+                    <div class="app-item">
+                       <img src="images/icons8-canva-50.png" alt="Canva">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-figma-50.png" alt="Figma">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-photoshop-50.png" alt="Adobe Photoshop">
+                    </div>
+                    <div class="app-item">
+                       <img src="images/icons8-illustrator-50.png" alt="Adobe Illustrator">
+                    </div>
+                    <div class="app-item">
+                      <img src="images/icons8-blender-3d-50.png" alt="Blender 3D">
+                   </div>
+                   <div class="app-item">
+                    <img src="images/icons8-cinema-4d-50.png" alt="Cinema 4D">
+                 </div>
+                 </div>
+              </div>
+
+    <!-- Filler 2 -->
+    <div class="image-container-filler2">
+      <img src="images/filler2.svg" alt="4 Weirdo" class="responsive-image1">
+    </div>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <section class="portfolio-section">
+      <h2>Portfolio</h2>
+      <div class="portfolio-container">
+        <div class="portfolio-item">
+          <img src="images/proj1.png" alt="Project 1" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj2.png" alt="Project 2" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj3.png" alt="Project 3" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj4.png" alt="Project 4" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj5.png" alt="Project 5" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj6.jpg" alt="Project 6" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj7.jpg" alt="Project 7" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj8.png" alt="Project 8" onclick="openModal(this)">
+        </div>
+        <div class="portfolio-item">
+          <img src="images/proj9.jpg" alt="Project 9" onclick="openModal(this)">
+        </div>
+      </div>
+    </section>
+  </section>
+    
+    <!-- Modal for Full Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="fullImage" />
+      <div id="caption"></div>
+    </div>
+    
+
+    <section class="comment-section">
+      <div id="app2">
+        <h2 class="heading">What do you think about my website?</h2>
+        <p>Hi! I’m glad you’re here. Feel free to leave a reaction, share your thoughts, and add your name below. Thanks for visiting! x Reign</p>
+    
+        <div>
+          <!-- Reactions -->
+          <div>
+            <button @click="react('like')">👍 Like</button>
+            <button @click="react('love')">❤️ Love</button>
+            <button @click="react('haha')">😂 Haha</button>
+            <button @click="react('wow')">😲 Wow</button>
+            <button @click="react('sad')">😢 Sad</button>
+            <button @click="react('angry')">😡 Angry</button>
+          </div>
+    
+          <br>
+    
+          <!-- Comment Form -->
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" v-model="name" id="name" placeholder="Enter your name ..." />
+          </div>
+          <div>
+            <label for="comment">Comment:</label>
+            <textarea v-model="newComment" id="comment" placeholder="Leave a comment ..."></textarea>
+          </div>
+          <button @click="addComment">Submit</button>
+        </div>
+
+        <p>Coomment section feature coming soon, thanks for waiting!</p>
+
+
+        <footer class="footer">
+          <hr>
+          <p>All rights reserved © Reanna Lofamia</p>
+      </footer>
+
+  </head>
 </html>
