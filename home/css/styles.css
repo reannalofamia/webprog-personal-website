@@ -1,0 +1,478 @@
+/* General Variables */
+:root {
+    --primary-color: #131313;
+    --secondary-color: #ffffff;
+    --accent-color: #000;
+    --light-color: #fff;
+    --font-family: 'Segoe UI', Tahoma;
+    --button-hover-color: black;
+    --transition-duration: 0.3s;
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/*Reign Section*/
+.reign {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .reign-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  .column-right-illustration {
+  flex: 1 1 300px;
+  text-align: center;
+  margin: 0 20px;
+  }
+
+  .column-right-illustration img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    transform: translateX(-65px); /* Maintain position */
+  }
+
+  .column-left-text {
+    flex: 2 1 600px;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 55px -50px 0;
+    transform: translateX(-150px); /* Maintain position */
+  }
+
+  .column-left-text {
+    font-size: 25px;
+    color: var(--primary-color);
+  }
+
+  .highlight {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+    .column-left-text {
+      transform: translateX(0); /* Reset position for smaller screens */
+      margin: 20px 0; /* Add proper margin to avoid overlap */
+    }
+  
+    .column-right-illustration img {
+      transform: translateX(0); /* Reset position for smaller screens */
+      width: 300px; /* Reduce size for better fit */
+      height: 300px; /* Maintain aspect ratio */
+      margin-top: 20px; /* Add space between the elements */
+    }
+  }
+
+  /* Default link styling */
+a {
+    color: var(--primary-color); /* Default link color (blue) */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes the text bold */
+  }
+  
+  /* Hover effect */
+  a:hover {
+    color: #f72626; /* Change to red when hovered */
+    text-decoration: underline; /* Add underline on hover */
+  }
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-color);
+    padding: 15px 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    font-weight: 500; /* Slightly bold */
+    text-decoration: none; /* Optional: remove underline */
+    color: #333; /* Default color */
+    margin: 0 15px;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* Optional hover effect */
+.nav-menu li a:hover {
+    font-weight: 600; /* Slightly bolder on hover */
+    color: #000000; /* Change color on hover (optional) */
+  }
+
+/* Filler 1 */
+  .name {
+    font-weight: 500; /* Slightly bold */
+    font-size: 25px;
+    transform: translateY(-2px); /* Move the element 10px upwards */
+  }
+
+  .image-container-weirdo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive-image1 {
+    max-width: 100%; /* Resize the image based on container size */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 28px; /* Adjust this value to move the image down */
+    object-fit: contain; /* Scale the image to fit within the container while preserving its aspect ratio */
+}
+
+/* About */
+.reign-about {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    gap: 20px; /* Adds space between the image and text */
+    width: 100%;
+    margin-bottom: 200px;
+    margin-top: 200px;
+  }
+  
+  .column-left-boogsh-image {
+    flex: 1 1 300px; /* Allows the image to take up space and be responsive */
+    text-align: center; /* Centers the image horizontally */
+  }
+  
+  .column-left-boogsh-image img {
+    width: 100%; /* Resize the image based on the container */
+    max-width: 450px; /* Ensures the image doesn't get too large */
+    height: auto; /* Keeps the aspect ratio intact */
+    object-fit: cover; /* Ensures the image doesn't get stretched */
+  }
+  
+  .column-right-boogsh-text {
+    flex: 2 1 600px; /* Allows the text to take up more space */
+    text-align: justify; /* Aligns text to the left */
+    line-height: 1.5;
+    font-size: 19px;
+    color: var(--primary-color);
+    margin: 0 20px;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .reign-about {
+      flex-direction: column; /* Stacks the image and text vertically on smaller screens */
+      gap: 10px; /* Reduces the gap between the image and text */
+    }
+  
+    .column-left-boogsh-image img {
+      max-width: 100%; /* Image takes full width on smaller screens */
+    }
+  
+    .column-right-boogsh-text {
+      font-size: 14px; /* Adjusts text size for smaller screens */
+    }
+  }
+
+  /* Stack Tools Container */
+.stack-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 0 20px; /* Ensure there is some padding to the sides */
+}
+
+/* Stack Categories */
+.stack-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Center-align the text inside the categories */
+}
+
+/* Category Header */
+.tools-stack h1 {
+    font-size: 22px;
+    font-weight: 780;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stack-category h1 {
+    font-size: 22px;
+    font-weight: 780;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Stack Apps List */
+.stack-apps-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Apps Items */
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tool Icons */
+.app-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effect on Tools */
+.app-item img:hover {
+    transform: scale(1.1); /* Slightly increases the size */
+    filter: brightness(1.2); /* Increases brightness */
+    cursor: pointer; /* Changes cursor to indicate interactivity */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .stack-categories {
+        gap: 30px;
+    }
+
+    .tools-list {
+        gap: 20px;
+    }
+
+    .tool-item img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Filler 2 */
+.image-container-filler2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  /* Portfolio Container */
+  .portfolio-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+  }
+  
+  /* Portfolio Item */
+  .portfolio-item {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Portfolio Images */
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Hover Effect on Portfolio Items */
+  .portfolio-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Modal */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow: auto;
+    text-align: center;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    margin: 10% auto;
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Modal Caption */
+  #caption {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+
+/* Comment Section */
+/* Section Styling */
+.comment-section {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comment-section .heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Resize the font for h2 and justify the text */
+.heading {
+  font-size: 28px; /* Adjust size as needed */
+  text-align: justify
+}
+
+/* Buttons */
+button {
+  background: #222222;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem 0.2rem 1rem 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #646464;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Input and Textarea */
+input[type="text"], textarea {
+  width: calc(100% - 1rem);
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px; /* Adjust font size if needed */
+  margin: 20px 0; /* Add space around the footer */
+}
+
+.footer hr {
+  border: none;
+  border-top: 1px solid #ccc; /* Adjust line color */
+  margin: 50px 0; /* Space around the line */
+}
+
+.comment-section {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+
+  border-radius: 5px;
+}
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
